@@ -21,8 +21,10 @@ public class TakeDamage : MonoBehaviour
                 //GameObject effect = Instantiate(hitEffect, transform.position, Quaternion.identity);
                 // Destroy(effect, 1f);
                 Destroy(gameObject);
+                SoundManager.PlaySound("enemyDead");
                
             }
+            SoundManager.PlaySound("playerHit");
         }
     }
 }
