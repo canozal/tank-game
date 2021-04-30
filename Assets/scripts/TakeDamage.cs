@@ -22,6 +22,12 @@ public class TakeDamage : MonoBehaviour
                 // Destroy(effect, 1f);
                 Destroy(gameObject);
                 SoundManager.PlaySound("enemyDead");
+
+                if (gameObject.tag == "user")
+                {
+                    Application.LoadLevel(Application.loadedLevel);
+                    Debug.Log("sdadasdasdas");
+                }
                
             }
             SoundManager.PlaySound("playerHit");
